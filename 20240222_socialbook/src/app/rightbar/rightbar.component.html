@@ -1,0 +1,70 @@
+<div class="right-sidebar">
+    <div class="sidebar-title">
+        <h4>Events</h4>
+        <a href="#">See All</a>
+    </div>
+    <div class="event" *ngFor="let event of events;let i=index" >
+        <div class="left-event">
+            <h3>{{event.date}}</h3>
+            <span>{{event.month}}</span>
+        </div>
+        <div class="right-event">
+            <h4>{{event.title}}</h4>
+            <p><i class="fas fa-map-marker-alt"></i>{{event.loc}}</p>
+            <a href="#">More Info</a>
+        </div>
+    </div>
+    <!-- <div class="event">
+        <div class="left-event">
+            <h3>22</h3>
+            <span>June</span>
+        </div>
+        <div class="right-event">
+            <h4>Mobile Marketing</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Willson Tech Park</p>
+            <a href="#">More Info</a>
+        </div>
+    </div> -->
+    <div class="sidebar-title">
+        <h4>Advertisement</h4>
+        <a href="#">close</a>
+    </div>
+    <img src="https://i.postimg.cc/CLXYx9BL/advertisement.png" class="siderbar-ads">
+    <div class="sidebar-title">
+        <h4>Conversation</h4>
+        <a href="#">Hide Chat</a>
+    </div>
+    <div class="online-list">
+        <div *ngIf="conversations.length > 0; else noConversations">
+            <div class="online-conv"*ngFor="let user of conversations;let i=index;">
+                <div class="online">
+                    <img src={{user.img_url}} alt="User Image">
+                </div>
+                <div>
+                    <p>{{ user.fname }} {{ user.lname }}</p>
+                </div>    
+            </div>
+        </div>
+        <ng-template #noConversations>
+            <p>No conversations available.</p>
+        </ng-template>
+    </div>
+    <!-- <div class="online-list">
+        <div class="online">
+            <img src="https://i.postimg.cc/4NhqByys/member-2.png">
+        </div>
+        <p>Jackson Aston</p>
+    </div>
+    <div class="online-list">
+        <div class="online">
+            <img src="https://i.postimg.cc/FH5qqvkc/member-3.png">
+        </div>
+        <p>Samona Rose</p>
+    </div>
+    <div class="online-list">
+        <div class="online">
+            <img src="https://i.postimg.cc/Sx65bPcP/member-4.png">
+        </div>
+        <p>Mike Pérez</p>
+    </div> -->
+</div>
