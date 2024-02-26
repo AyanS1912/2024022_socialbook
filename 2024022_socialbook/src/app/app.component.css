@@ -10,6 +10,17 @@
     --nav-color: #1876f2;
     --bg-color: #fff;
 
+
+}
+
+.light-theme {
+    --background-color: #efefef;
+    --text-color: #000000;
+}
+  
+.dark-theme {
+    --background-color: #333333;
+    --text-color: #ffffff;
 }
 
 body{

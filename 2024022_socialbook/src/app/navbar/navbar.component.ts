@@ -12,4 +12,16 @@ export class NavbarComponent {
       "fname": "Ayan",
       "lname": "Sheikh",
     }]
+
+    settingsMenuToggle() {
+      const settingsmenu = document.querySelector(".settings-menu") as HTMLElement;
+      settingsmenu.classList.toggle("settings-menu-height");
+    }
+
+    darkBtnClick() {
+      const darkBtn = document.getElementById("dark-btn") as HTMLElement;
+      darkBtn.classList.toggle("dark-btn-on");
+      document.body.classList.toggle("dark-theme");
+  
+    }
 }
