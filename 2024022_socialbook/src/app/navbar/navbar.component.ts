@@ -19,9 +19,6 @@ export class NavbarComponent {
     }
 
     darkBtnClick() {
-      const darkBtn = document.getElementById("dark-btn") as HTMLElement;
-      darkBtn.classList.toggle("dark-btn-on");
-      document.body.classList.toggle("dark-theme");
-  
+      const darkBtn = document.getElementById("dark-btn") as HTMLElement;  
     }
 }
